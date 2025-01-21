@@ -929,3 +929,69 @@ to{-webkit-transform:translate(251px,-200px) rotate(180deg)}
 ::-webkit-scrollbar-corner{background:rgba(0,0,0,0);border-radius:0 0 8px 0}
 ::-webkit-scrollbar-button{background-color:rgba(0,0,0,0);height:2px;width:2px}
 }
+
+/* 侧边栏菜单项基础样式 */
+.sidebar-item {
+    position: relative;
+    width: 100%;
+    min-width: 250px !important; /* 确保有足够宽度 */
+}
+
+/* 子菜单容器样式 */
+.sidebar-item ul {
+    width: 100%;
+    min-width: 250px !important;
+    background: rgba(0,0,0,.1);
+}
+
+/* 子菜单项样式 */
+.sidebar-item ul li {
+    width: 100%;
+    min-width: 250px !important;
+}
+
+/* smooth链接样式 */
+.smooth {
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 250px !important;
+    padding: 8px 15px !important;
+    text-decoration: none !important;
+}
+
+/* 特别处理子菜单中的smooth链接 */
+.sidebar-item ul li .smooth {
+    padding-left: 40px !important;
+}
+
+/* span标签样式 */
+.smooth span {
+    display: block !important;
+    width: auto !important;
+    min-width: 150px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    color: #b2b8be !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* 图标样式 */
+.smooth i.fas,
+.smooth i.iconfont {
+    margin-right: 10px !important;
+    flex-shrink: 0 !important;
+}
+
+/* 悬停效果 */
+.smooth:hover span {
+    color: #fff !important;
+}
+
+/* 确保父级容器不遮挡内容 */
+.sidebar-menu-inner {
+    overflow: visible !important;
+    min-width: 250px !important;
+}
